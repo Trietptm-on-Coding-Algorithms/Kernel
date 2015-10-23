@@ -1,20 +1,11 @@
-int myint = 3;
-module_param(myint, int, 0);
-
-int myintarray[2];
-module_param_array(myintarray, int, NULL, 0);
-
-int myshortarray[4];
-int count;
-mydule_param_array(myshortarray, short,0);
-
 /*
 *  Create by err0rless : 2015-10-21
 *  hello-5.c
+*  reference https://gist.github.com/kimhoki/9bc3b74ae6225ac3c557
 */
 
 #include <linux/module.h>
-#include <linux/moduleparam.h> // module param
+#include <linux/moduleparam.h>
 #include <linux/kernel.h>
 #include <linux/init.h>
 #include <linux/stat.h>
@@ -30,7 +21,7 @@ static int myintArray[2] = {-1, -1};
 static int arr_argc = 0;
 
 module_param(myshort, short, S_IRUSR|S_IWUSR|S_IRGRP|S_IWGRP);
-MODUL_PARM_DESC(myshort, "A short integer");
+MODULE_PARM_DESC(myshort, "A short integer");
 
 module_param(myint, int, S_IRUSR|S_IWUSR|S_IRGRP|S_IROTH);
 MODULE_PARM_DESC(mylong, "A long interger");
@@ -44,6 +35,7 @@ MODULE_PARM_DESC(myintArray, "An array of integers");
 static int __init hello_5_init(void)
 {
 	int i;
+	printk(KERN_INFO "---------------------------------\n");
 	printk(KERN_INFO "Hello, World! 5\n");
 	printk(KERN_INFO "myshort is a short integer.%hd\n", myshort);
 	printk(KERN_INFO "myint is an int.%d\n", myint);

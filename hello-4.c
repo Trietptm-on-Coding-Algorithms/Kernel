@@ -2,6 +2,8 @@
 *  Create by err0rless : 2015-10-21
 *  hello-4.c
 *  License Example
+*
+*  $ modinfo hello-4.ko // print information
 */
 
 #include <linux/module.h>
