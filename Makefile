@@ -4,13 +4,13 @@ obj-m += hello-3.o
 obj-m += hello-4.o
 obj-m += hello-5.o
 
-all:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
-	rm -rf ./*.o
+obj-m += startstop.o
+startstop-objs := start.o stop.o
+
+default:
+	make -C /lib/modules/$(shell uname -r)/build SUBDIRS=$(shell pwd) modules
 	rm -rf ./*.mod.*
+	rm -rf ./.*.cmd
+	rm -rf ./*.o
 	rm -rf ./Module.symvers
 	rm -rf ./modules.order
-	rm -rf ./.*.cmd
-
-clean:
-	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
