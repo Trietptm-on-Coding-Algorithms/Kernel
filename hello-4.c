@@ -13,6 +13,12 @@
 #define DRIVER_AUTHOR "YoungHoo kim. <err0rless313@gmail.com>"
 #define DRIVER_DESC   "A sample driver for license"
 
+// module licenses.
+MODULE_LICENSE("GPL");
+MODULE_AUTHOR(DRIVER_AUTHOR);    // who wrote this module
+MODULE_DESCRIPTION(DRIVER_DESC); // what does this module do
+MODULE_SUPPORTED_DEVICE("testdevice");
+
 static int __init init_hello_4(void)
 {
 	printk(KERN_INFO "Hello, World! 4\n");
@@ -26,9 +32,3 @@ static void __exit cleanup_hello_4(void)
 
 module_init(init_hello_4);
 module_exit(cleanup_hello_4);
-
-// module licenses.
-MODULE_LICENSE("GPL");
-MODULE_AUTHOR(DRIVER_AUTHOR); // who wrote this mod
-MODULE_DESCRIPTION(DRIVER_DESC); // what does this mod do.
-MODULE_SUPPORTED_DEVICE("testdevice");
