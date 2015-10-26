@@ -1,6 +1,7 @@
 /*
 *  Create by err0rless : 2015-10-21
 *  hello-2.c
+*  module_init(), module_exit()
 */
 
 #include <linux/module.h>

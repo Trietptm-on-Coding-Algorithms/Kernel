@@ -1,6 +1,7 @@
 /*
 *  Create by err0rless : 2015-10-21
 *  hello-1.c : hello-1.ko
+*  how to use printk()
 */
 #include <linux/module.h> // Needed by all modules
 #include <linux/kernel.h> // Needed for KERN_INFO

@@ -1,7 +1,7 @@
 /*
 *  Create by err0rless : 2015-10-21
 *  hello-4.c
-*  License Example
+*  License Example, GPL
 *
 *  $ modinfo hello-4.ko // print information
 */

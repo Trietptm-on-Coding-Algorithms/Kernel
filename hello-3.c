@@ -1,6 +1,7 @@
 /*
 *  Create by err0rless : 2015-10-21
 *  hello-3.c
+*  variable for kernel __initdata
 */
 
 #include <linux/module.h>

@@ -1,6 +1,7 @@
 /*
 *  Create by err0rless : 2015-10-21
 *  hello-5.c
+*  process parameters
 *  reference https://gist.github.com/kimhoki/9bc3b74ae6225ac3c557
 */
 
